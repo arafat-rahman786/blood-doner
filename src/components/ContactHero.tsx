@@ -1,4 +1,3 @@
-import React from "react";
 import { ArrowDown, ArrowRight, Heart, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 
 export default function ContactHero() {

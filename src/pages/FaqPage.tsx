@@ -1,4 +1,4 @@
-import React from 'react'
+
 import FaqHero from '../components/FaqHero';
 import Navber from '../components/Navber';
 import Footer from '../components/Footer';

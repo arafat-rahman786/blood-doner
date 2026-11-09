@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import api from "../../lib/api";
 import type { Donor } from "../../data/donars";

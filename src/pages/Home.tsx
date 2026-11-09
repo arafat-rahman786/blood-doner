@@ -1,4 +1,3 @@
-import React from 'react'
 import Navber from '../components/Navber';
 import Hero from '../components/Hero';
 import Benifits from '../components/Benifits';

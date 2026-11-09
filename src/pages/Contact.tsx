@@ -1,4 +1,3 @@
-import React from 'react'
 import Navber from '../components/Navber';
 import ContactHero from '../components/ContactHero';
 import Footer from '../components/Footer';
