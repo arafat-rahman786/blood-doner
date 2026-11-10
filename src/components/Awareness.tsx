@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 
 
 export default function Awareness() {
@@ -51,13 +52,12 @@ export default function Awareness() {
               </p>
             </div>
 
-            <a
-              href="#register"
+            <Link to={"/BecomeDonor"}
               className="relative z-10 mt-10 inline-flex w-fit items-center gap-3 rounded-xl bg-[#ed2441] px-6 py-3.5 text-sm font-bold text-white transition duration-300 hover:-translate-y-1 hover:bg-red-700 hover:shadow-lg hover:shadow-red-500/20"
             >
               রক্তদাতা হিসেবে যুক্ত হোন
               <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
-            </a>
+            </Link>
           </div>
 
           <div className="grid gap-5 sm:grid-cols-2 lg:col-span-7">

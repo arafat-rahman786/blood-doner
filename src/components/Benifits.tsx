@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 
 
 export default function Benifits() {
@@ -248,13 +249,12 @@ export default function Benifits() {
               যুক্ত হোন এবং মানবতার পাশে দাঁড়ান।
             </p>
 
-            <a
-              href="#register"
+            <Link to={"/BecomeDonor"}
               className="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-[#ed2441] px-7 py-3.5 text-sm font-bold text-white transition hover:bg-red-700"
             >
               রক্তদাতা হিসেবে যুক্ত হোন
               <span>→</span>
-            </a>
+            </Link>
           </div>
         </div>
       </section>

@@ -1,6 +1,8 @@
+import CountUp from "react-countup";
 import Form from "./Form";
 
 export default function DonorHero() {
+  const banglaNumber = (number: number) => number.toLocaleString("bn-BD");
   return (
     <section className="relative min-h-screen overflow-hidden bg-[#0d0e12] px-4 py-20 text-white sm:px-6 lg:px-8">
       <div className="pointer-events-none absolute -left-40 top-20 h-96 w-96 rounded-full bg-red-600/10 blur-[120px]" />
@@ -8,7 +10,6 @@ export default function DonorHero() {
 
       <div className="relative mx-auto max-w-7xl">
         <div className="grid items-center gap-16 lg:grid-cols-2">
-
           <div>
             <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-red-500/20 bg-red-500/10 px-4 py-2">
               <span className="h-2 w-2 animate-pulse rounded-full bg-red-500" />
@@ -26,8 +27,8 @@ export default function DonorHero() {
 
             <p className="mt-6 max-w-xl text-sm leading-8 text-gray-400 sm:text-base">
               রক্তের প্রয়োজনে আর দুশ্চিন্তা নয়। আপনার আশেপাশে থাকা স্বেচ্ছায়
-              রক্তদাতাদের খুঁজে নিন সহজেই। আপনার সামান্য সহযোগিতাই হতে পারে
-              কারও নতুন জীবনের কারণ।
+              রক্তদাতাদের খুঁজে নিন সহজেই। আপনার সামান্য সহযোগিতাই হতে পারে কারও
+              নতুন জীবনের কারণ।
             </p>
 
             <div className="mt-9 flex flex-wrap items-center gap-4">
@@ -58,7 +59,16 @@ export default function DonorHero() {
             <div className="mt-12 grid max-w-lg grid-cols-3 gap-5 border-t border-white/10 pt-8">
               <div>
                 <h3 className="text-2xl font-extrabold text-white sm:text-3xl">
-                  ১২০০+
+                  <CountUp
+                    start={0}
+                    end={1200}
+                    duration={3}
+                    separator=","
+                    formattingFn={banglaNumber}
+                    enableScrollSpy
+                    scrollSpyOnce
+                  />
+                  +
                 </h3>
                 <p className="mt-2 text-xs text-gray-500 sm:text-sm">
                   নিবন্ধিত রক্তদাতা
@@ -67,7 +77,15 @@ export default function DonorHero() {
 
               <div>
                 <h3 className="text-2xl font-extrabold text-white sm:text-3xl">
-                  ৮০০+
+                  <CountUp
+                    start={0}
+                    end={800}
+                    duration={3}
+                    formattingFn={banglaNumber}
+                    enableScrollSpy
+                    scrollSpyOnce
+                  />
+                  +
                 </h3>
                 <p className="mt-2 text-xs text-gray-500 sm:text-sm">
                   সফল রক্তদান
@@ -76,7 +94,14 @@ export default function DonorHero() {
 
               <div>
                 <h3 className="text-2xl font-extrabold text-white sm:text-3xl">
-                  ৬৪
+                  <CountUp
+                    start={0}
+                    end={64}
+                    duration={3}
+                    formattingFn={banglaNumber}
+                    enableScrollSpy
+                    scrollSpyOnce
+                  />
                 </h3>
                 <p className="mt-2 text-xs text-gray-500 sm:text-sm">
                   জেলা জুড়ে
@@ -89,7 +114,6 @@ export default function DonorHero() {
             <div className="absolute -inset-5 rounded-[2rem] bg-red-600/10 blur-3xl" />
 
             <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-[#17181e] p-5 shadow-2xl sm:p-8">
-
               <div className="mb-7 flex items-center justify-between">
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-widest text-red-400">
@@ -131,11 +155,10 @@ export default function DonorHero() {
                 </svg>
 
                 <p className="text-xs leading-6 text-gray-400">
-                  আপনার দেওয়া তথ্য ব্যবহার করে আপনার এলাকার রক্তদাতাদের
-                  খুঁজে পেতে সাহায্য করবে রক্তবন্ধন।
+                  আপনার দেওয়া তথ্য ব্যবহার করে আপনার এলাকার রক্তদাতাদের খুঁজে
+                  পেতে সাহায্য করবে রক্তবন্ধন।
                 </p>
               </div>
-
             </div>
 
             <div className="absolute -bottom-7 -left-5 hidden items-center gap-3 rounded-2xl border border-white/10 bg-[#202127] p-4 shadow-xl sm:flex">
@@ -151,7 +174,6 @@ export default function DonorHero() {
                 </p>
               </div>
             </div>
-
           </div>
         </div>
       </div>

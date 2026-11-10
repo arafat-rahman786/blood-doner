@@ -1,12 +1,12 @@
 import Navber from '../components/Navber';
 import Footer from '../components/Footer';
-import DonorHero from '../components/DonorHero';
+import Hero from '../components/Hero';
 
 export default function DonorFindPage() {
   return (
     <>
     <Navber />
-    <DonorHero />
+    <Hero />
     <Footer />
     </>
   )
