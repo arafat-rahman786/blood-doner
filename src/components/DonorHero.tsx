@@ -1,5 +1,6 @@
 import CountUp from "react-countup";
 import Form from "./Form";
+import { Link } from "react-router";
 
 export default function DonorHero() {
   const banglaNumber = (number: number) => number.toLocaleString("bn-BD");
@@ -32,8 +33,7 @@ export default function DonorHero() {
             </p>
 
             <div className="mt-9 flex flex-wrap items-center gap-4">
-              <a
-                href="#donor-search"
+              <Link to={"/DonorFindPage"}
                 className="inline-flex items-center gap-2 rounded-xl bg-[#ed2441] px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-red-600/20 transition hover:-translate-y-1 hover:bg-red-600"
               >
                 রক্তদাতা খুঁজুন
@@ -46,7 +46,7 @@ export default function DonorHero() {
                 >
                   <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
-              </a>
+              </Link>
 
               <a
                 href="#about"

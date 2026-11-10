@@ -31,7 +31,8 @@ export default function Awareness() {
             <div className="absolute -right-4 top-24 h-40 w-40 rounded-full border border-red-400/20 transition duration-700 group-hover:scale-125"></div>
 
             <div className="relative z-10">
-              <span className="inline-block animate-[float_3s_ease-in-out_infinite] text-6xl">🩸</span>
+              <img src="https://i.postimg.cc/WbGLSZpv/ea5340f1b4e3e47678e2207ceeb4c226-removebg-preview.png"
+               className="inline-block animate-[float_3s_ease-in-out_infinite] w-25"/>
 
               <p className="mt-8 text-sm font-semibold tracking-wider text-red-300">
                 মানবতার সবচেয়ে সুন্দর উপহার
@@ -63,28 +64,28 @@ export default function Awareness() {
           <div className="grid gap-5 sm:grid-cols-2 lg:col-span-7">
             {[
               {
-                icon: "❤️",
+                icon: "https://i.postimg.cc/G2Lx0ZGv/5f8930e83b6ef81209a3df86e1247a36-removebg-preview.png",
                 number: "০১",
                 title: "কারা রক্তদান করতে পারবেন?",
                 description: "নির্ধারিত বয়স, ওজন ও স্বাস্থ্যগত যোগ্যতা পূরণকারী সুস্থ ব্যক্তিরা চিকিৎসকের পরীক্ষা-নিরীক্ষার পর রক্তদান করতে পারেন।",
                 link: "বিস্তারিত জানুন",
               },
               {
-                icon: "🏥",
+                icon: "https://i.postimg.cc/rwvtC7f5/16f7606093eea92c2c7e3142bc84ae26-removebg-preview.png",
                 number: "০২",
                 title: "রক্তদানের আগে প্রস্তুতি",
                 description: "পর্যাপ্ত ঘুমান, পুষ্টিকর খাবার খান, পানি পান করুন এবং নিজের শারীরিক অবস্থা সম্পর্কে চিকিৎসককে সঠিক তথ্য দিন।",
                 link: "প্রয়োজনীয় পরামর্শ",
               },
               {
-                icon: "💧",
+                icon: "https://i.postimg.cc/7hMpmv1Z/d83dedddec2dc81d15bd72a6e5f788a1-removebg-preview.png",
                 number: "০৩",
                 title: "রক্তদানের পর করণীয়",
                 description: "কিছুক্ষণ বিশ্রাম নিন, পর্যাপ্ত পানি পান করুন, পুষ্টিকর খাবার খান এবং রক্তদান কেন্দ্রের নির্দেশনা মেনে চলুন।",
                 link: "সুস্থ থাকার পরামর্শ",
               },
               {
-                icon: "🧬",
+                icon: "https://i.postimg.cc/445LL1kf/9f8dc061c14d66a7340c5393ccf0bc34-removebg-preview.png",
                 number: "০৪",
                 title: "রক্তের গ্রুপ সম্পর্কে জানুন",
                 description: "নিজের রক্তের গ্রুপ জানা থাকলে জরুরি প্রয়োজনে উপযুক্ত রক্তদাতার সঙ্গে যোগাযোগ করতে সুবিধা হয়।",
@@ -94,12 +95,10 @@ export default function Awareness() {
               <div
                 key={item.number}
                 style={{ animationDelay: `${0.2 + index * 0.15}s` }}
-                className="group animate-[fadeUp_0.8s_ease-out_both] rounded-3xl border border-white/[0.07] bg-[#17181e] p-7 transition duration-500 hover:-translate-y-2 hover:border-red-500/40 hover:bg-[#1d1920] hover:shadow-[0_15px_40px_rgba(237,36,65,0.08)]"
+                className="group animate-[fadeUp_0.8s_ease-out_both] rounded-3xl border border-white/[0.07]  p-7 transition duration-500 hover:-translate-y-2 hover:border-red-500/40 hover:shadow-[0_15px_40px_rgba(237,36,65,0.08)]"
               >
                 <div className="flex items-center justify-between">
-                  <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-red-500/10 text-2xl transition duration-500 group-hover:rotate-12 group-hover:scale-110">
-                    {item.icon}
-                  </span>
+                  <img src={item.icon} className="flex h-12 w-12 items-center justify-center rounded-xl bg-red-500/10 text-2xl transition duration-500 group-hover:rotate-12 group-hover:scale-110"/>
                   <span className="text-3xl font-bold text-white/10 transition duration-300 group-hover:text-red-500/30">
                     {item.number}
                   </span>
@@ -125,7 +124,9 @@ export default function Awareness() {
         <div className="mt-6 grid gap-5 lg:grid-cols-2">
           <div className="group flex animate-[fadeUp_0.8s_0.8s_ease-out_both] flex-col justify-between gap-6 rounded-3xl border border-white/[0.07] bg-[#17181e] p-7 transition duration-500 hover:-translate-y-2 hover:border-red-500/40 hover:shadow-[0_15px_40px_rgba(237,36,65,0.08)] sm:flex-row sm:items-center sm:p-9">
             <div>
-              <span className="inline-block text-3xl transition duration-500 group-hover:scale-125">🤝</span>
+              <span className="inline-block text-3xl transition duration-500 group-hover:scale-125">
+                <img src="https://i.postimg.cc/sXKYcwBP/5835f777378b562cd69bb5c51f37bb85-removebg-preview.png" alt="" />
+              </span>
               <h3 className="mt-4 text-xl font-bold group-hover:text-red-400">
                 ভুল ধারণা দূর করুন
               </h3>
@@ -140,7 +141,9 @@ export default function Awareness() {
 
           <div className="group flex animate-[fadeUp_0.8s_0.95s_ease-out_both] flex-col justify-between gap-6 rounded-3xl border border-white/[0.07] bg-[#17181e] p-7 transition duration-500 hover:-translate-y-2 hover:border-red-500/40 hover:shadow-[0_15px_40px_rgba(237,36,65,0.08)] sm:flex-row sm:items-center sm:p-9">
             <div>
-              <span className="inline-block text-3xl transition duration-500 group-hover:scale-125">🌍</span>
+              <span className="inline-block text-3xl transition duration-500 group-hover:scale-125">
+                <img src="https://i.postimg.cc/BbKT2DFt/c93aedb26d9d9cffbdadfef9f9109f6e-removebg-preview.png" alt="" />
+              </span>
               <h3 className="mt-4 text-xl font-bold group-hover:text-red-400">
                 গড়ে তুলুন রক্তদানের সংস্কৃতি
               </h3>

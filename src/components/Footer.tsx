@@ -1,5 +1,6 @@
 
 
+import { TfiGithub } from "react-icons/tfi";
 import { Link } from "react-router";
 
 export default function Footer() {
@@ -19,7 +20,7 @@ export default function Footer() {
                   </span>
                 </div>
                 <span className="text-2xl font-bold transition duration-300 group-hover:text-red-400">
-                  রক্ত<span className="text-[#ed2441]">বন্ধন</span>
+                  রক্ত<span className="text-[#ed2441]"> বন্ধন</span>
                 </span>
               </Link>
 
@@ -29,16 +30,30 @@ export default function Footer() {
               </p>
 
               <div className="mt-6 flex items-center gap-3">
-                {["f", "in", "▶"].map((item, index) => (
                   <a
-                    key={item}
-                    href="#"
-                    style={{ animationDelay: `${index * 0.15}s` }}
+                    href="https://www.facebook.com/profile.php?id=61594222403712"
                     className="flex h-10 w-10 animate-[fadeUp_0.8s_ease-out_both] items-center justify-center rounded-lg border border-white/10 text-gray-400 transition duration-300 hover:-translate-y-2 hover:rotate-6 hover:border-[#ed2441] hover:bg-[#ed2441] hover:text-white hover:shadow-lg hover:shadow-red-500/20"
                   >
-                    <span className="font-bold">{item}</span>
+                    <span className="font-bold">
+                      f
+                    </span>
                   </a>
-                ))}
+                  <a
+                    href="https://www.linkedin.com/in/yasin-arafat-dev/"
+                    className="flex h-10 w-10 animate-[fadeUp_0.8s_ease-out_both] items-center justify-center rounded-lg border border-white/10 text-gray-400 transition duration-300 hover:-translate-y-2 hover:rotate-6 hover:border-[#ed2441] hover:bg-[#ed2441] hover:text-white hover:shadow-lg hover:shadow-red-500/20"
+                  >
+                    <span className="font-bold">
+                      in
+                    </span>
+                  </a>
+                  <a
+                    href="https://github.com/arafat-rahman786"
+                    className="flex h-10 w-10 animate-[fadeUp_0.8s_ease-out_both] items-center justify-center rounded-lg border border-white/10 text-gray-400 transition duration-300 hover:-translate-y-2 hover:rotate-6 hover:border-[#ed2441] hover:bg-[#ed2441] hover:text-white hover:shadow-lg hover:shadow-red-500/20"
+                  >
+                    <span className="font-bold">
+                      <TfiGithub />
+                    </span>
+                  </a>
               </div>
             </div>
 
@@ -67,7 +82,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    to={"/"}
+                    to={"/BecomeDonor"}
                     className="group inline-flex items-center gap-2 transition duration-300 hover:translate-x-2 hover:text-[#ed2441]"
                   >
                     <span className="h-1 w-0 rounded-full bg-[#ed2441] transition-all duration-300 group-hover:w-2" />
@@ -76,7 +91,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    to={"/"}
+                    to={"/Importences"}
                     className="group inline-flex items-center gap-2 transition duration-300 hover:translate-x-2 hover:text-[#ed2441]"
                   >
                     <span className="h-1 w-0 rounded-full bg-[#ed2441] transition-all duration-300 group-hover:w-2" />
@@ -85,7 +100,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    to={"/"}
+                    to={"/AwarenessPage"}
                     className="group inline-flex items-center gap-2 transition duration-300 hover:translate-x-2 hover:text-[#ed2441]"
                   >
                     <span className="h-1 w-0 rounded-full bg-[#ed2441] transition-all duration-300 group-hover:w-2" />
@@ -140,10 +155,11 @@ export default function Footer() {
                     ✉
                   </span>
                   <a
-                    href="mailto:info@example.com"
+                    target="_blank"
+                    href="mailto:hmyasinarafat74@gmail.com"
                     className="transition duration-300 hover:translate-x-1 hover:text-[#ed2441]"
                   >
-                    info@example.com
+                    hmyasinarafat74@gmail.com
                   </a>
                 </div>
 
@@ -152,10 +168,11 @@ export default function Footer() {
                     ☎
                   </span>
                   <a
-                    href="tel:+8801000000000"
+                    href="https://wa.me/8801718945989?text=আসসালামু%20আলাইকুম%20!"
+                    target="_blank"
                     className="transition duration-300 hover:translate-x-1 hover:text-[#ed2441]"
                   >
-                    +৮৮০ ১০০০-০০০০০০
+                    +৮৮০ ১৭১৮৯৪৫৯৮৯
                   </a>
                 </div>
               </div>

@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 
 
 export default function AwarenessHero() {
@@ -29,13 +30,12 @@ export default function AwarenessHero() {
           </p>
 
           <div className="mt-9 flex flex-wrap gap-4">
-            <a
-              href="#awareness"
+            <Link to={"/AwarenessPage"}
               className="group inline-flex items-center gap-3 rounded-xl bg-red-600 px-7 py-4 font-semibold text-white shadow-lg shadow-red-600/20 transition duration-300 hover:-translate-y-1 hover:bg-red-500"
             >
               সচেতনতামূলক তথ্য জানুন
               <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
-            </a>
+            </Link>
 
             <a
               href="#myths"
