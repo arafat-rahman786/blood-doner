@@ -3,7 +3,6 @@ import type { FormValues } from "./Form";
 import { type Donor } from "../../data/donars";
 import bd from "bangladesh-geojson";
 import api from "../../lib/api";
-;
 type Props = {
   set: React.Dispatch<React.SetStateAction<boolean>>;
   getData: FormValues;
@@ -89,36 +88,48 @@ export default function DonerPopup({ set, getData }: Props) {
           </div>
 
           <div className="overflow-y-auto px-5 py-5 sm:px-7">
-            <div className="mb-5 rounded-xl border border-green-500/20 bg-green-500/5 p-4">
+            <div
+              className={`mb-5 rounded-xl border p-4 ${
+                filtersDonors.length > 0
+                  ? "border-green-500/20 bg-green-500/5"
+                  : "border-red-500/20 bg-red-500/5"
+              }`}
+            >
               <div className="flex flex-wrap items-center justify-between gap-2">
                 <div className="flex items-center gap-2">
-                  <span className="flex h-9 w-9 items-center justify-center rounded-full bg-green-500/10 text-green-400">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-5 w-5"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
+                  <span
+                    className={`flex h-9 w-9 items-center justify-center rounded-full ${
+                      filtersDonors.length > 0
+                        ? "bg-green-500/10 text-green-400"
+                        : "bg-red-500/10 text-red-400"
+                    }`}
+                  >
+                    {filtersDonors.length > 0 ? "✓" : "!"}
                   </span>
+
                   <div>
                     <h3 className="font-bold text-white">
-                      {filtersDonors.length} জন রক্তদাতা পাওয়া গেছে!
+                      {filtersDonors.length > 0
+                        ? `${filtersDonors.length} জন রক্তদাতা পাওয়া গেছে!`
+                        : "দুঃখিত! কোনো রক্তদাতা পাওয়া যায়নি"}
                     </h3>
+
                     <p className="text-xs text-gray-400">
-                      আপনার অনুসন্ধান সফল হয়েছে
+                      {filtersDonors.length > 0
+                        ? "আপনার অনুসন্ধান সফল হয়েছে"
+                        : "আপনার এলাকায় এই মুহূর্তে কোনো রক্তদাতা পাওয়া যায়নি"}
                     </p>
                   </div>
                 </div>
-                <span className="rounded-full bg-green-500/10 px-3 py-1 text-xs font-semibold text-green-400">
-                  সফল
+
+                <span
+                  className={`rounded-full px-3 py-1 text-xs font-semibold ${
+                    filtersDonors.length > 0
+                      ? "bg-green-500/10 text-green-400"
+                      : "bg-red-500/10 text-red-400"
+                  }`}
+                >
+                  {filtersDonors.length > 0 ? "সফল" : "পাওয়া যায়নি"}
                 </span>
               </div>
             </div>
